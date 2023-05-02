@@ -16,18 +16,39 @@ const slides = [
 		"tagLine": "Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-console.log(slides)
 
-const leftArrow = document.querySelector(".arrow_left");
-const rightArrow = document.querySelector(".arrow_right");
+console.log(slides);
 
-console.log(leftArrow)
-console.log(rightArrow)
 
-leftArrow.addEventListener("click", function () {
-	console.log("test click fleche gauche")
-});
+const dotsContainer = document.querySelector('.dots');//Récupérer l'élément html contenant les points
+console.log(dotsContainer)
 
-rightArrow.addEventListener("click", function () {
-	console.log("test click fleche droite")
-});
+for (let i = 0; i < slides.length; i++) {//Créer boucle for pour chaque élément (image) de la liste
+	console.log(`i : ${i}`);
+
+	const dot = document.createElement('div');//Créer élément div
+	console.log(`dot :`, dot);
+
+	dot.classList.add('dot');//Ajout de la class CSS 'dot' à l'élément créer
+	console.log('dot.classList', dot.classList);
+
+	dotsContainer.appendChild(dot);//Ajout de l'élément créé à l'élément parents 'dots
+	console.log('dotsContainer après appendChild(dot)', dotsContainer);
+}
+
+
+	const leftArrow = document.querySelector(".arrow_left");
+	const rightArrow = document.querySelector(".arrow_right");
+
+	// console.log(leftArrow)
+	// console.log(rightArrow)
+
+	leftArrow.addEventListener("click", function () {
+		console.log("test click fleche gauche")
+	});
+
+	rightArrow.addEventListener("click", function () {
+		console.log("test click fleche droite")
+	});
+
+
